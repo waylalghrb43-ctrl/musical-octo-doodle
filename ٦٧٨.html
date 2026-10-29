@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حساب النجم التراثي - تصميم وائل الغرب</title>
+    <style>
+        /* خلفية ليلية مثيرة مع نجوم متحركة */
+        body {
+            font-family: 'Tahoma', sans-serif;
+            background: radial-gradient(circle at center, #1b1b3a 0%, #0b0b1a 100%);
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow-x: hidden;
+        }
+
+        /* تصميم اسم وائل الغرب في الأعلى ثلاثي الأبعاد ومتحرك وينبض بالألوان */
+        .brand-header {
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .brand-title {
+            font-size: 38px;
+            font-weight: 900;
+            font-style: italic;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
+            text-shadow: 
+                0 1px 0 #ccc, 
+                0 2px 0 #c9c9c9, 
+                0 3px 0 #bbb, 
+                0 4px 0 #b9b9b9, 
+                0 5px 0 #aaa, 
+                0 6px 1px rgba(0,0,0,.1), 
+                0 0 5px rgba(0,0,0,.1), 
+                0 1px 3px rgba(0,0,0,.3), 
+                0 3px 5px rgba(0,0,0,.2), 
+                0 5px 10px rgba(0,0,0,.25), 
+                0 10px 10px rgba(0,0,0,.2), 
+                0 20px 20px rgba(0,0,0,.15);
+            animation: pulseColors 4s infinite alternate, floatEffect 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseColors {
+            0% { color: #ff0055; text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055, 0 5px 10px rgba(0,0,0,0.5); }
+            25% { color: #00ffcc; text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 5px 10px rgba(0,0,0,0.5); }
+            50% { color: #ffff00; text-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00, 0 5px 10px rgba(0,0,0,0.5); }
+            75% { color: #9900ff; text-shadow: 0 0 10px #9900ff, 0 0 20px #9900ff, 0 5px 10px rgba(0,0,0,0.5); }
+            100% { color: #ff6600; text-shadow: 0 0 10px #ff6600, 0 0 20px #ff6600, 0 5px 10px rgba(0,0,0,0.5); }
+        }
+
+        @keyframes floatEffect {
+            0% { transform: translateY(0) scale(1); }
+            100% { transform: translateY(-5px) scale(1.03); }
+        }
+
+        /* صندوق التطبيق الرئيسي */
+        .container {
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 25px;
+            margin: 20px auto;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        h3 {
+            color: #00ffcc;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #ddd;
+            font-size: 14px;
+        }
+
+        input, button {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            background: rgba(0, 0, 0, 0.3);
+            color: #fff;
+        }
+
+        input::placeholder {
+            color: #aaa;
+        }
+
+        button {
+            background: linear-gradient(45deg, #ff0055, #ff6600);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 0, 85, 0.4);
+        }
+
+        button:hover {
+            transform: scale(1.02);
+            background: linear-gradient(45deg, #ff6600, #ff0055);
+            box-shadow: 0 6px 20px rgba(255, 0, 85, 0.6);
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(0, 255, 204, 0.1);
+            border: 1px solid rgba(0, 255, 204, 0.3);
+            border-radius: 8px;
+            display: none;
+            text-align: right;
+            color: #e0fbfc;
+        }
+
+        /* حقوق النشر في الأسفل */
+        .footer-rights {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #aaa;
+            letter-spacing: 1px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- اسم التصميم في الأعلى متحرك وينبض بالألوان وثلاثي الأبعاد -->
+    <div class="brand-header">
+        <div class="brand-title">   مرحبا بكم في منصة   للتنجيم 781325738وائل الغرب  </div>
+    </div>
+
+    <div class="container">
+        <h3>حساب النجم التراثي</h3>
+        <p>أدخل اسم الشخص واسم الوالدة لاستخراج النجم بالحساب التراثي:</p>
+        
+        <input type="text" id="personName" placeholder="اسم الشخص (مثال: وائل)">
+        <input type="text" id="motherName" placeholder="اسم الومثال:  ()">
+        
+        <button onclick="calculateStar()">استخراج النجم</button>
+
+        <div id="result"></div>
+    </div>
+
+    <!-- حقوق النشر في الأسفل -->
+    <div class="footer-rights">
+        حقوق النشر: وائل الغرب 781325738
+    </div>
+
+    <script>
+        // جدول حساب الجمل (قيم الحروف)
+        const abjadValues = {
+            'ا': 1, 'أ': 1, 'إ': 1, 'آ': 1, 'ب': 2, 'ج': 3, 'د': 4, 'ه': 5, 'ة': 5, 'و': 6, 'ز': 7, 'ح': 8, 'ط': 9,
+            'ي': 10, 'ى': 10, 'ك': 20, 'ل': 30, 'م': 40, 'ن': 50, 'س': 60, 'ع': 70, 'ف': 80, 'ص': 90,
+            'ق': 100, 'ر': 200, 'ش': 300, 'ت': 400, 'ث': 500, 'خ': 600, 'ذ': 700, 'ض': 800, 'ظ': 900, 'غ': 1000
+        };
+
+        // ترتيب الأبراج (12 برجاً)
+        const zodiacSigns = [
+            "الحوت (الباقي 0 أو 12)", 
+            "الحمل", 
+            "الثور", 
+            "الجوزاء", 
+            "السرطان", 
+            "الأسد", 
+            "العذراء", 
+            "الميزان", 
+            "العقرب", 
+            "القوس", 
+            "الجدي", 
+            "الدلو"
+        ];
+
+        function getWordSum(word) {
+            let sum = 0;
+            for (let char of word.trim()) {
+                if (abjadValues[char]) {
+                    sum += abjadValues[char];
+                }
+            }
+            return sum;
+        }
+
+        function calculateStar() {
+            let pName = document.getElementById("personName").value;
+            let mName = document.getElementById("motherName").value;
+            let resultDiv = document.getElementById("result");
+
+            if (pName === "" || mName === "") {
+                alert("الرجاء إدخال اسم الشخص واسم الوالدة بشكل صحيح.");
+                return;
+            }
+
+            let sumPerson = getWordSum(pName);
+            let sumMother = getWordSum(mName);
+            let totalSum = sumPerson + sumMother;
+
+            let remainder = totalSum % 12;
+            let index = remainder === 0 ? 0 : remainder;
+            let starResult = zodiacSigns[index];
+
+            resultDiv.style.display = "block";
+            resultDiv.innerHTML = `
+                <strong>نتائج الحساب التراثي:</strong><br>
+                - مجموع اسم (${pName}) = ${sumPerson}<br>
+                - مجموع اسم الوالدة (${mName}) = ${sumMother}<br>
+                - المجموع الكلي = ${totalSum}<br>
+                - الباقي من القسمة على 12 = ${remainder === 0 ? 12 : remainder}<br>
+                <hr style="border-color: rgba(255,255,255,0.2);">
+                <strong>النجم الناتج: ${starResult}</strong>
+            `;
+        }
+    </script>
+
+</body>
+</html>
